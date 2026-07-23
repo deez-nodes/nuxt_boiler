@@ -1,5 +1,7 @@
 # TradeSlayer
 
+> **TODO / investigate:** dev server renders at `http://localhost:3001/`, not `:3000`. Port 3000 was taken by another project running concurrently, so Nuxt fell back to 3001 — the app is fine, but confirm the expected dev URL and whether a fixed port should be pinned.
+
 ## Overview
 Trading journal and strategy tracking application built with Nuxt 4 + Vue 3.
 
@@ -87,9 +89,13 @@ UDashboardGroup
 - **UPageColumns** — CSS masonry columns, use for variable-height content
 - **UPageCard** — marketing/landing page cards with spotlight effects; use **UCard** for dashboard data cards
 - **UPageBody** — adds `mt-8 pb-24 space-y-12`, designed for content/marketing pages, NOT dashboard panels
+- Verify a component's valid `color`/`variant`/`size` against its generated theme file `.nuxt/ui/<component>.ts` (e.g. `.nuxt/ui/badge.ts`)
 
 ## Strategy Card Architecture
-Converted from React JSX prototypes in `card_designs/` to native Vue 3 SFCs.
+Converted from React JSX prototypes in `card_designs/` to native Vue 3 SFCs. (The `card_designs/` prototypes have since been moved out to a separate app — expect them absent from this repo; a working tree showing them deleted vs HEAD is intentional.)
+
+### Intentional, not-yet-wired (do not "clean up" as dead code)
+- `CardMeta.iconGradient`, `StrategyTab.color`, `StrategySection` `color`/`icon` props, and `hex()`/`hexAlpha()`/`palette` in `useStrategyColors` render nothing yet but are planned wiring — keep them.
 
 ### Design decisions
 - **14 separate SFC files** (not a data-driven single component) for template clarity and debuggability
@@ -116,3 +122,4 @@ Converted from React JSX prototypes in `card_designs/` to native Vue 3 SFCs.
 - `pnpm dev` — Start dev server
 - `pnpm build` — Production build
 - `pnpm preview` — Preview production build
+- Typecheck: `pnpm exec nuxi typecheck` (needs `vue-tsc`+`typescript` devDeps). First run fails `ERR_PNPM_IGNORED_BUILDS` — fix once with `pnpm approve-builds` (select esbuild, @parcel/watcher, vue-demi). Never bypass pnpm by calling binaries directly.

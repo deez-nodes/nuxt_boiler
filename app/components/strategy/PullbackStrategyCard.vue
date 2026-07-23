@@ -278,8 +278,8 @@ const results = ['T1', 'T2', 'chained PB', 'scratch', 'stop', 'no fill'] as cons
 const confluences = ['Vol Cluster OK', 'Correct Delta', 'CVD Exhaust', 'Iceberg Context', 'Large Lots', 'Imbalance', 'NQ Correlation']
 
 const logForm = reactive({
-  direction: 'short (sell PB)' as string,
-  stopType: '' as string,
-  result: '' as string,
+  direction: 'short (sell PB)',
+  stopType: '',
+  result: '',
 })
 </script>

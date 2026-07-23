@@ -265,7 +265,7 @@ const results = ['T1', 'T2', 'runner', 'scratch', 'stop'] as const
 const confluenceChecks = ['HTF Level', 'Vol Exhaustion', 'CVD Diverge', 'Iceberg', 'Large Lot', 'Imbalance', 'Structure Break']
 
 const logForm = reactive({
-  direction: 'long' as string,
-  result: '' as string,
+  direction: 'long',
+  result: '',
 })
 </script>
