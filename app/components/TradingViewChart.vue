@@ -9,7 +9,7 @@ interface Props {
 }
 
 const props = withDefaults(defineProps<Props>(), {
-    symbol: 'CME_MINI:ES1!',
+    symbol: 'NASDAQ:SOFI',
     interval: 'D',
 })
 
