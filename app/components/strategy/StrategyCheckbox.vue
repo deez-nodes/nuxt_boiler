@@ -5,7 +5,7 @@
 <script setup lang="ts">
 import type { StrategyColor } from '~/types/strategy'
 
-const props = withDefaults(defineProps<{
+withDefaults(defineProps<{
   label: string
   sublabel?: string
   accent?: StrategyColor

@@ -20,6 +20,8 @@
     "@iconify-json/lucide": "^1.2.95",
     "@tailwindcss/forms": "^0.5.11",
     "@tailwindcss/typography": "^0.5.19",
-    "tailwindcss": "^4.2.1"
+    "tailwindcss": "^4.2.1",
+    "typescript": "^7.0.2",
+    "vue-tsc": "^3.3.7"
   }
 }

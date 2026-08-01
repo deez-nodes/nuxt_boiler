@@ -3,8 +3,7 @@
     <UCard v-for="card in cards" :key="card.id" :to="`/strategies/${card.id}`" as="NuxtLink">
       <template #header>
         <span>{{ card.icon }}</span>
-        <UBadge v-if="card.type === 'composite'" label="COMPOSITE" color="success" variant="subtle" size="xs" />
-        <UBadge v-else label="ATOMIC" color="neutral" variant="subtle" size="xs" />
+        <UBadge :label="card.type === 'composite' ? 'COMPOSITE' : 'ATOMIC'" :color="card.type === 'composite' ? 'success' : 'neutral'" variant="subtle" size="xs" />
       </template>
       <p><strong>{{ card.title }}</strong></p>
       <p>{{ card.subtitle }}</p>

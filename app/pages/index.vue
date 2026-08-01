@@ -1,7 +1,7 @@
 <template>
     <div :class="$style.chartWrap">
         <ClientOnly>
-            <TradingViewChart symbol="CME_MINI:ES1!" interval="D" />
+            <TradingViewChart symbol="NASDAQ:SOFI" interval="D" />
         </ClientOnly>
     </div>
 </template>

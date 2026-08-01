@@ -254,8 +254,8 @@ const results = ['T1', 'T2', 'runner', 'scratch', 'stop'] as const
 const confirmations = ['Vol Split Skew', 'T&S Flood', 'CVD Trending', 'Imbalance 10%+', 'Offer Pull', 'Book Flip', 'Large Lots']
 
 const logForm = reactive({
-  direction: 'long' as string,
-  entryType: '' as string,
-  result: '' as string,
+  direction: 'long',
+  entryType: '',
+  result: '',
 })
 </script>
